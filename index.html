@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>USA Bank Scam Complaint Portal</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="container">
+      <div class="brand">
+        <span class="brand-mark">USA</span>
+        <div>
+          <h1>Bank Scam Complaint Portal</h1>
+        </div>
+      </div>
+      <div class="header-tag">Fraud Case Management</div>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <div>
+        <p class="eyebrow">Customer Protection</p>
+        <h2>Submit a bank scam complaint</h2>
+        <p>
+          Report suspected fraud, recover case tracking, and assign an investigation agent.
+        </p>
+      </div>
+      <div class="hero-card">
+        <p>Case status overview</p>
+        <div class="stats">
+          <div>
+            <strong id="totalCases">0</strong>
+            <span>Total</span>
+          </div>
+          <div>
+            <strong id="openCases">0</strong>
+            <span>Open</span>
+          </div>
+          <div>
+            <strong id="resolvedCases">0</strong>
+            <span>Resolved</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="panel">
+      <div class="panel-header">
+        <h3>Complaint Form</h3>
+        <span id="caseIdBadge" class="badge">Case ID: Auto-generated</span>
+      </div>
+
+      <form id="complaintForm">
+        <div class="grid">
+          <div class="field">
+            <label for="complainantName">Complainant name</label>
+            <input id="complainantName" name="complainantName" type="text" placeholder="Jane Doe" required />
+          </div>
+
+          <div class="field">
+            <label for="bankName">Bank name</label>
+            <input id="bankName" name="bankName" type="text" placeholder="Chase, Bank of America..." required />
+          </div>
+
+          <div class="field">
+            <label for="bankAccount">Account type</label>
+            <select id="bankAccount" name="bankAccount" required>
+              <option value="">Select</option>
+              <option>Checking</option>
+              <option>Savings</option>
+              <option>Credit Card</option>
+              <option>Loan</option>
+              <option>Investment</option>
+            </select>
+          </div>
+
+          <div class="field">
+            <label for="complaintType">Complaint type</label>
+            <select id="complaintType" name="complaintType" required>
+              <option value="">Select</option>
+              <option>Unauthorized Transaction</option>
+              <option>Phishing Scam</option>
+              <option>Identity Theft</option>
+              <option>Wire Fraud</option>
+              <option>Fake Account / Account takeover</option>
+              <option>Other</option>
+            </select>
+          </div>
+
+          <div class="field">
+            <label for="amountLost">Amount lost</label>
+            <input id="amountLost" name="amountLost" type="number" min="0" step="0.01" placeholder="2500.00" required />
+          </div>
+
+          <div class="field">
+            <label for="incidentDate">Incident date</label>
+            <input id="incidentDate" name="incidentDate" type="date" required />
+          </div>
+
+          <div class="field">
+            <label for="assignedAgent">Assign agent</label>
+            <select id="assignedAgent" name="assignedAgent" required>
+              <option value="">Select agent</option>
+              <option>Emma Johnson</option>
+              <option>Daniel Moore</option>
+              <option>Sophia Patel</option>
+              <option>Marcus Green</option>
+              <option>Olivia Davis</option>
+            </select>
+          </div>
+
+          <div class="field">
+            <label for="priority">Priority</label>
+            <select id="priority" name="priority" required>
+              <option value="">Select</option>
+              <option>Low</option>
+              <option>Medium</option>
+              <option>High</option>
+              <option>Critical</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="field">
+          <label for="complaintDetails">Complaint details</label>
+          <textarea id="complaintDetails" name="complaintDetails" rows="6" placeholder="Describe the scam, suspicious contact, timeline, and any supporting facts..." required></textarea>
+        </div>
+
+        <div class="actions">
+          <button type="submit" class="primary-btn">Submit Complaint</button>
+          <button type="reset" class="secondary-btn">Clear Form</button>
+        </div>
+      </form>
+    </section>
+
+    <section class="panel">
+      <div class="panel-header">
+        <h3>Submitted Cases</h3>
+        <select id="statusFilter">
+          <option value="All">All statuses</option>
+          <option value="New">New</option>
+          <option value="In Review">In Review</option>
+          <option value="Pending">Pending</option>
+          <option value="Resolved">Resolved</option>
+        </select>
+      </div>
+
+      <div id="complaintList" class="complaint-list"></div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
