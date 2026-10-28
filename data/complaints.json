@@ -1,0 +1,44 @@
+[
+  {
+    "caseId": "USB-2026-0001",
+    "complainantName": "Alice Carter",
+    "bankName": "Chase",
+    "bankAccount": "Checking",
+    "complaintType": "Phishing Scam",
+    "amountLost": 2450,
+    "incidentDate": "2026-09-18",
+    "assignedAgent": "Emma Johnson",
+    "priority": "High",
+    "complaintDetails": "Customer reported receiving a fake email urging a password reset and transfer of funds.",
+    "createdAt": "2026-09-18T10:00:00.000Z",
+    "status": "In Review"
+  },
+  {
+    "caseId": "USB-2026-0002",
+    "complainantName": "Michael Wu",
+    "bankName": "Bank of America",
+    "bankAccount": "Credit Card",
+    "complaintType": "Unauthorized Transaction",
+    "amountLost": 870,
+    "incidentDate": "2026-09-21",
+    "assignedAgent": "Daniel Moore",
+    "priority": "Medium",
+    "complaintDetails": "Several unauthorized charges were posted to the customer's card in the last 72 hours.",
+    "createdAt": "2026-09-21T14:30:00.000Z",
+    "status": "New"
+  },
+  {
+    "caseId": "USB-2026-0003",
+    "complainantName": "Rachel Simmons",
+    "bankName": "Wells Fargo",
+    "bankAccount": "Savings",
+    "complaintType": "Wire Fraud",
+    "amountLost": 12300,
+    "incidentDate": "2026-10-02",
+    "assignedAgent": "Sophia Patel",
+    "priority": "Critical",
+    "complaintDetails": "Fraudulent bank transfer completed after a spoofed call impersonating the branch manager.",
+    "createdAt": "2026-10-02T12:15:00.000Z",
+    "status": "Pending"
+  }
+]

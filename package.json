@@ -1,0 +1,13 @@
+{
+  "name": "bank-scam-complaints-portal",
+  "version": "1.0.0",
+  "description": "USA bank scam complaint portal with agent dashboard and complaint tracking",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node --watch server.js"
+  },
+  "dependencies": {
+    "express": "^4.19.2"
+  }
+}
