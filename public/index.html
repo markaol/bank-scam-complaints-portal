@@ -83,26 +83,28 @@
 
           <div class="content-grid">
             <section class="panel form-panel">
-              <div class="panel-header">
+              <div class="panel-header complaint-header">
                 <h2>New Complaint</h2>
-                <span id="caseIdBadge" class="badge">Case ID: Auto-generated</span>
+                <span id="caseIdBadge" class="badge">Case ID:<br />USB-2026-2028</span>
               </div>
 
               <form id="complaintForm" class="complaint-form">
-                <div class="field-grid">
-                  <label>
-                    Complainant name
-                    <input name="complainantName" type="text" placeholder="Jane Doe" required />
-                  </label>
+                <div class="field-row">
+                  <div class="input-block">
+                    <label for="complainantName">Complainant name</label>
+                    <input id="complainantName" name="complainantName" type="text" placeholder="Jane" required />
+                  </div>
 
-                  <label>
-                    Bank name
-                    <input name="bankName" type="text" placeholder="Chase" required />
-                  </label>
+                  <div class="input-block">
+                    <label for="bankName">Bank name</label>
+                    <input id="bankName" name="bankName" type="text" placeholder="Chase" required />
+                  </div>
+                </div>
 
-                  <label>
-                    Account type
-                    <select name="bankAccount" required>
+                <div class="field-row">
+                  <div class="input-block">
+                    <label for="bankAccount">Account type</label>
+                    <select id="bankAccount" name="bankAccount" required>
                       <option value="">Select</option>
                       <option>Checking</option>
                       <option>Savings</option>
@@ -110,11 +112,11 @@
                       <option>Loan</option>
                       <option>Investment</option>
                     </select>
-                  </label>
+                  </div>
 
-                  <label>
-                    Complaint type
-                    <select name="complaintType" required>
+                  <div class="input-block">
+                    <label for="complaintType">Complaint type</label>
+                    <select id="complaintType" name="complaintType" required>
                       <option value="">Select</option>
                       <option>Unauthorized Transaction</option>
                       <option>Phishing Scam</option>
@@ -123,41 +125,45 @@
                       <option>Fake Account / Account takeover</option>
                       <option>Other</option>
                     </select>
-                  </label>
+                  </div>
+                </div>
 
-                  <label>
-                    Amount lost
-                    <input name="amountLost" type="number" min="0" step="0.01" placeholder="2500.00" required />
-                  </label>
+                <div class="field-row">
+                  <div class="input-block">
+                    <label for="amountLost">Amount lost</label>
+                    <input id="amountLost" name="amountLost" type="number" min="0" step="0.01" placeholder="2500.00" required />
+                  </div>
 
-                  <label>
-                    Incident date
-                    <input name="incidentDate" type="date" required />
-                  </label>
+                  <div class="input-block">
+                    <label for="incidentDate">Incident date</label>
+                    <input id="incidentDate" name="incidentDate" type="date" required />
+                  </div>
+                </div>
 
-                  <label>
-                    Assign agent
-                    <select name="assignedAgent" required>
+                <div class="field-row">
+                  <div class="input-block">
+                    <label for="assignedAgent">Assign agent</label>
+                    <select id="assignedAgent" name="assignedAgent" required>
                       <option value="">Select agent</option>
                     </select>
-                  </label>
+                  </div>
 
-                  <label>
-                    Priority
-                    <select name="priority" required>
+                  <div class="input-block">
+                    <label for="priority">Priority</label>
+                    <select id="priority" name="priority" required>
                       <option value="">Select</option>
                       <option>Low</option>
                       <option>Medium</option>
                       <option>High</option>
                       <option>Critical</option>
                     </select>
-                  </label>
+                  </div>
                 </div>
 
-                <label>
-                  Complaint details
-                  <textarea name="complaintDetails" rows="5" placeholder="Describe the scam and timeline..." required></textarea>
-                </label>
+                <div class="input-block full-width">
+                  <label for="complaintDetails">Complaint details</label>
+                  <textarea id="complaintDetails" name="complaintDetails" rows="5" placeholder="Describe the scam and timeline..." required></textarea>
+                </div>
 
                 <div class="form-actions">
                   <button type="submit" class="primary-btn">Submit complaint</button>
